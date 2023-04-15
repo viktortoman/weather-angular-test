@@ -1,0 +1,24 @@
+<div class="flex flex-col items-center" *ngIf="!loaded; else dataIsLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #dataIsLoaded>
+  <div *ngIf="selectedCapital && actualWeather">
+    <h1 class="mb-3">Capital: <span class="font-bold">{{ selectedCapital.capital }}</span></h1>
+    <weather-table [weatherData]="weatherData" [tableType]="tableType"></weather-table>
+  </div>
+
+  <ul class="divide-y divide-gray-200 pt-5" *ngIf="countries.length > 0; else noResult">
+    <li class="py-3" *ngFor="let country of countries">
+      <country-data [country]="country"
+                    (weather)="getWeather($event)"
+                    (foreCast)="getForecast($event)"
+      >
+      </country-data>
+    </li>
+  </ul>
+  <ng-template #noResult>
+    <h1>No result.</h1>
+  </ng-template>
+</ng-template>
+

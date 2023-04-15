@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body { height: 100%; background: #dedede}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-card {
+  color: rgb(14, 18, 27);
+  border-radius: 10px !important;
+  border: 1px solid #e7e9ed !important;
+  box-sizing: border-box;
+  box-shadow: unset;
+
+  .mat-mdc-card-content {
+    background: white;
+  }
+}
+
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #3f51b5;
+}

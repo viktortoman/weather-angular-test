@@ -1,0 +1,18 @@
+<div class="flex items-center space-x-4" *ngIf="country">
+  <div class="flex-1 min-w-0">
+    <p class="text-sm font-medium text-gray-900 truncate">
+      {{ country.name }}
+    </p>
+    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+      {{ country.capital }}
+    </p>
+  </div>
+  <div class="inline-flex items-center text-base font-semibold text-gray-900">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2" (click)="getWeather(country)">
+      Weather
+    </button>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" (click)="getForecast(country)">
+      Forecast
+    </button>
+  </div>
+</div>

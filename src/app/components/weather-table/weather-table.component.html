@@ -1,0 +1,24 @@
+<table class="border-collapse border border-slate-500 w-full text-center" *ngIf="weatherData">
+  <thead>
+  <tr>
+    <th class="border border-slate-600" *ngIf="tableType === tableTypeForecast">Date</th>
+    <th class="border border-slate-600">Temperature</th>
+    <th class="border border-slate-600">Humidity</th>
+    <th class="border border-slate-600">Pressure</th>
+    <th class="border border-slate-600">Weather</th>
+    <th class="border border-slate-600">Wind speed</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of weatherData">
+    <td class="border border-slate-700" *ngIf="tableType === tableTypeForecast">
+      {{ data.dt_txt }}
+    </td>
+    <td class="border border-slate-700">{{ data.main.temp }} ℃</td>
+    <td class="border border-slate-700">{{ data.main.humidity }} %</td>
+    <td class="border border-slate-700">{{ data.main.pressure }} hPa</td>
+    <td class="border border-slate-700">{{ data.weather[0].main }}</td>
+    <td class="border border-slate-700">{{ data.wind.speed }} km/h</td>
+  </tr>
+  </tbody>
+</table>
