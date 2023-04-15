@@ -108,6 +108,7 @@ export class CountryListComponent implements OnInit {
       this.forecast = data;
       this.tableType = TableType.Forecast;
       this.weatherData = this.forecast.list;
+      console.log(this.weatherData)
     })
   }
 

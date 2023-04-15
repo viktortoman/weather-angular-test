@@ -1,0 +1,7 @@
+<div class="flex flex-col items-center m-auto" [ngSwitch]="weather">
+  <mat-icon svgIcon="weather-sunny" class="mr-2" *ngSwitchCase="'Clear'"></mat-icon>
+  <mat-icon svgIcon="weather-cloudy" class="mr-2" *ngSwitchCase="'Clouds'"></mat-icon>
+  <mat-icon svgIcon="weather-snowy" class="mr-2" *ngSwitchCase="'Snow'"></mat-icon>
+  <mat-icon svgIcon="weather-rainy" class="mr-2" *ngSwitchCase="'Rain'"></mat-icon>
+  <span *ngSwitchDefault>{{ weather }}</span>
+</div>

@@ -17,7 +17,9 @@
     <td class="border border-slate-700">{{ data.main.temp }} ℃</td>
     <td class="border border-slate-700">{{ data.main.humidity }} %</td>
     <td class="border border-slate-700">{{ data.main.pressure }} hPa</td>
-    <td class="border border-slate-700">{{ data.weather[0].main }}</td>
+    <td class="border border-slate-700">
+      <weather-icon [weather]="data.weather[0].main"></weather-icon>
+    </td>
     <td class="border border-slate-700">{{ data.wind.speed }} km/h</td>
   </tr>
   </tbody>

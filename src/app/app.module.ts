@@ -13,13 +13,16 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { WeatherTableComponent } from './components/weather-table/weather-table.component';
 import { CountryDataComponent } from './components/country-data/country-data.component';
+import { WeatherIconComponent } from './components/weather-icon/weather-icon.component';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
     WeatherTableComponent,
-    CountryDataComponent
+    CountryDataComponent,
+    WeatherIconComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { CountryDataComponent } from './components/country-data/country-data.com
     BrowserAnimationsModule,
     MatListModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule
   ],
   providers: [
     {
