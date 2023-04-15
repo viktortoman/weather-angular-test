@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
+## Set environment variables (environments directory => environment.ts) if you want to change, they have a default value
+  - countryApiUrl (Countries resource API url)
+  - weatherApiUrl (Weather & forecast data resource API url)
+  - abstractApiUrl (Location information data resource API url)
+  - weatherApiAppId (Weather & forecast data resource API APP ID)
+  - abstractApiAppId (Location information data resource API APP ID)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
